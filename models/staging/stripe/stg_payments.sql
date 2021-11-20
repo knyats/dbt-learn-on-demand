@@ -4,7 +4,7 @@ with payments as(
         orderid as order_id,
         paymentmethod as payment_method,
         status as status,
-        amount/100 as amount,
+        {{ cents_to_dollars('amount') }} as amount,
         created as created_at
     FROM {{source('stripe', 'payment')}}
 )

@@ -10,3 +10,4 @@ with orders as (
 )
 
 select * from orders
+{{ limit_data_in_dev(column_name = 'order_date', num_days = 1440 ) }}
