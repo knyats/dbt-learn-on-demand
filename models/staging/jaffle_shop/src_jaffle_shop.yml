@@ -21,15 +21,3 @@ sources:
             tests:
               - unique
               - not_null
-  - name: stripe
-    description: our raw data for stripe dataset (payments)
-    database: raw
-    tables:
-      - name: payment
-        description: raw payments data
-        columns:
-          - name: id
-            description: primary key for payments
-            tests:
-              - unique
-              - not_null
